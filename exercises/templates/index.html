@@ -5,7 +5,20 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
 
-<h1>doing nothing</h1>
-<p>because... I do nothing?</p>
+<h1>League of Legends</h1>
+<p>it's enjoyable</p>
+<h2> players </h2>
+<ul>
+    {% if liked_players == false %}
+        <p> people just judge this game too much :( , best players: </p>
+    {% else %}
+        <p> join the club, hope you like these players :  </p>
+    {% endif %}
+
+    {% for player in players %}
+    <li> {{player}} </li>
+    {% endfor %}
+</ul>
+
 </body>
-</html> 
+</html>
